@@ -1,0 +1,59 @@
+---
+import content from "../content.json";
+import Icon from "./Icons.astro";
+
+const { stats, points, headline } = content.whyPeak;
+---
+
+<section id="why" class="py-20 lg:py-28 bg-navy-900 text-white relative overflow-hidden">
+  <div class="absolute inset-0 opacity-[0.07] peak-motif pointer-events-none"></div>
+
+  <div class="relative mx-auto max-w-(--container-content) px-6 lg:px-8">
+    <div class="grid lg:grid-cols-12 gap-12 items-start">
+      <div class="lg:col-span-5">
+        <div class="text-xs uppercase tracking-[0.15em] text-amber-brand font-bold">Why Peak</div>
+        <h2 class="mt-3 font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight">
+          {headline}
+        </h2>
+        <p class="mt-5 text-lg text-navy-100 leading-relaxed">
+          [WHY PEAK INTRO — 2-3 sentences. What separates Peak from the next guy property managers might call. Reliability, communication, range of services, local knowledge, etc.]
+        </p>
+
+        <dl class="mt-10 grid grid-cols-3 gap-6">
+          {stats.map((stat) => (
+            <div>
+              <dt class="text-xs uppercase tracking-wide text-navy-300 font-semibold">{stat.label}</dt>
+              <dd class="mt-1 font-display text-3xl font-bold text-amber-brand">{stat.value}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+
+      <div class="lg:col-span-7 grid sm:grid-cols-2 gap-4">
+        {points.map((p, i) => (
+          <div class="rounded-xl bg-navy-800/60 border border-navy-700 p-6 backdrop-blur">
+            <div class="flex items-center gap-3">
+              <div class="h-8 w-8 rounded-md bg-amber-brand/15 text-amber-brand grid place-items-center font-display font-bold text-sm">
+                {String(i + 1).padStart(2, "0")}
+              </div>
+              <h3 class="font-display text-lg font-semibold">{p.title}</h3>
+            </div>
+            <p class="mt-3 text-sm leading-relaxed text-navy-100">{p.body}</p>
+          </div>
+        ))}
+
+        <div class="rounded-xl bg-amber-brand/10 border border-amber-brand/30 p-6 sm:col-span-2">
+          <div class="flex items-start gap-4">
+            <Icon name="shield" class="h-7 w-7 text-amber-brand shrink-0" />
+            <div>
+              <h3 class="font-display text-lg font-semibold">Licensed, insured, and accountable</h3>
+              <p class="mt-2 text-sm leading-relaxed text-navy-100">
+                California [C-XX LICENSE #] · [INSURANCE / BOND DETAILS] · Workmanship covered by [WARRANTY TERMS].
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

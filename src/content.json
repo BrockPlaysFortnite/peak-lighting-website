@@ -1,0 +1,80 @@
+{
+  "_comment": "Single source of truth. Fields in [BRACKETS] are placeholders for Kevin's info — swap them when you have it. Everything else is real and locked in.",
+
+  "business": {
+    "name": "Peak Lighting & Energy",
+    "tagline": "[TAGLINE — one-line value prop, e.g. 'Trusted commercial property services across [SERVICE AREA]']",
+    "shortPitch": "[SHORT PITCH — 2-3 sentences for the hero subheading. What you do, who for, why it matters.]"
+  },
+
+  "contact": {
+    "phone": "626-252-6663",
+    "phoneHref": "tel:+16262526663",
+    "email": "kevin@peaklighting.com",
+    "addressLine1": "PO Box 6129",
+    "addressLine2": "Santa Barbara, CA 93160"
+  },
+
+  "serviceArea": "[SERVICE AREA — e.g. 'Santa Barbara & Ventura Counties']",
+
+  "services": [
+    {
+      "title": "[SERVICE 1 NAME]",
+      "description": "[SERVICE 1 — 1-2 sentence description of what's included and the typical outcome.]",
+      "icon": "spark"
+    },
+    {
+      "title": "[SERVICE 2 NAME]",
+      "description": "[SERVICE 2 — 1-2 sentence description.]",
+      "icon": "panel"
+    },
+    {
+      "title": "[SERVICE 3 NAME]",
+      "description": "[SERVICE 3 — 1-2 sentence description.]",
+      "icon": "wrench"
+    },
+    {
+      "title": "[SERVICE 4 NAME]",
+      "description": "[SERVICE 4 — 1-2 sentence description.]",
+      "icon": "shield"
+    }
+  ],
+
+  "whyPeak": {
+    "headline": "Why property managers choose Peak",
+    "stats": [
+      { "value": "[X+]", "label": "Years serving the Central Coast" },
+      { "value": "[C-XX]", "label": "Licensed & insured in California" },
+      { "value": "[24hr]", "label": "Typical response time" }
+    ],
+    "points": [
+      {
+        "title": "[VALUE PROP 1]",
+        "body": "[Short blurb supporting value prop 1 — e.g. responsiveness, single point of contact, etc.]"
+      },
+      {
+        "title": "[VALUE PROP 2]",
+        "body": "[Short blurb — e.g. licensed, insured, code-compliant.]"
+      },
+      {
+        "title": "[VALUE PROP 3]",
+        "body": "[Short blurb — e.g. honest pricing, no surprises, written quotes.]"
+      }
+    ]
+  },
+
+  "testimonials": [
+    {
+      "quote": "[TESTIMONIAL 1 — short client quote, 1-2 sentences.]",
+      "author": "[NAME]",
+      "role": "[ROLE / COMPANY]"
+    },
+    {
+      "quote": "[TESTIMONIAL 2 — short client quote.]",
+      "author": "[NAME]",
+      "role": "[ROLE / COMPANY]"
+    }
+  ],
+
+  "showTestimonials": false
+}

@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+/* Tailwind v4 CSS-first theme config */
+@theme {
+  /* Brand */
+  --color-navy-50: #f1f4fa;
+  --color-navy-100: #dde4f1;
+  --color-navy-200: #bcc9e2;
+  --color-navy-300: #92a4cb;
+  --color-navy-400: #6981b0;
+  --color-navy-500: #4a6396;
+  --color-navy-600: #364d7c;
+  --color-navy-700: #2a3d63;
+  --color-navy-800: #1b2a48;
+  --color-navy-900: #0b1e3f;
+  --color-navy-950: #061229;
+
+  --color-amber-brand: #f5a623;
+  --color-amber-brand-soft: #fbcd6f;
+
+  /* Type */
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /* Container */
+  --container-content: 76rem;
+}
+
+/* Base */
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-navy-900);
+  background: #ffffff;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Section anchor offset so sticky header doesn't cover headings */
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
+/* Subtle peak/chevron motif used in hero + section dividers */
+.peak-motif {
+  background-image:
+    linear-gradient(135deg, transparent 49.5%, rgba(245, 166, 35, 0.08) 50%, transparent 50.5%),
+    linear-gradient(45deg, transparent 49.5%, rgba(245, 166, 35, 0.08) 50%, transparent 50.5%);
+  background-size: 48px 48px;
+}
+
+/* Placeholder image blocks — deliberately styled so they read as 'intentional placeholder', not 'broken' */
+.placeholder-img {
+  background:
+    linear-gradient(135deg, rgba(11, 30, 63, 0.92), rgba(54, 77, 124, 0.92)),
+    radial-gradient(circle at 30% 30%, rgba(245, 166, 35, 0.35), transparent 60%);
+  background-blend-mode: normal, screen;
+  position: relative;
+  overflow: hidden;
+}
+.placeholder-img::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(135deg, transparent 49.5%, rgba(255, 255, 255, 0.06) 50%, transparent 50.5%);
+  background-size: 32px 32px;
+}
+.placeholder-img .placeholder-label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1rem;
+}

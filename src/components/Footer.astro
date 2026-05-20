@@ -1,0 +1,49 @@
+---
+import content from "../content.json";
+const year = new Date().getFullYear();
+const base = import.meta.env.BASE_URL;
+---
+
+<footer class="bg-navy-950 text-navy-100">
+  <div class="mx-auto max-w-(--container-content) px-6 lg:px-8 py-14">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div class="lg:col-span-2">
+        <img
+          src={`${base}logo.png`}
+          alt={content.business.name}
+          class="h-20 w-auto rounded-sm"
+          width="500"
+          height="300"
+        />
+        <p class="mt-4 text-sm leading-relaxed text-navy-200 max-w-md">
+          [FOOTER TAGLINE — one sentence about the business. Can be the same as hero tagline or a shorter version.]
+        </p>
+      </div>
+
+      <div>
+        <div class="text-xs uppercase tracking-wide text-amber-brand-soft font-semibold">Contact</div>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a href={content.contact.phoneHref} class="hover:text-white">{content.contact.phone}</a></li>
+          <li><a href={`mailto:${content.contact.email}`} class="hover:text-white break-all">{content.contact.email}</a></li>
+          <li class="text-navy-300">{content.contact.addressLine1}</li>
+          <li class="text-navy-300">{content.contact.addressLine2}</li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="text-xs uppercase tracking-wide text-amber-brand-soft font-semibold">Site</div>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a href="#services" class="hover:text-white">Services</a></li>
+          <li><a href="#why" class="hover:text-white">Why Peak</a></li>
+          <li><a href="#area" class="hover:text-white">Service area</a></li>
+          <li><a href="#contact" class="hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-12 pt-6 border-t border-navy-800 flex flex-col sm:flex-row justify-between gap-3 text-xs text-navy-400">
+      <div>© {year} {content.business.name}. All rights reserved.</div>
+      <div>Licensed & insured in California · [C-XX LICENSE #]</div>
+    </div>
+  </div>
+</footer>
